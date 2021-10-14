@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+      home: Home(),
+    ));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Hello Ahmed',
+          style: TextStyle(
+            fontSize: 20.0,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.black,
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.red,
+            child: Text('A'),
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.blue,
+            child: Text('B'),
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.green,
+            child: Text('C'),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print("You clicked on me");
+        },
+        child: Text('Click'),
+        backgroundColor: Colors.black,
+      ),
+    );
+  }
+}
